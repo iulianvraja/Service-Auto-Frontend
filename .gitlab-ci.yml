@@ -1,0 +1,31 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+    
+variables:
+  CI: ""
+
+build:
+  stage: build
+  image: node:11
+  script:
+    - npm install --progress=false
+    - npm run build
+
+deploy:
+  stage: deploy
+  image: ruby:2.3
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=scoala-vaduizei --api-key=19650a01-9a68-4929-9b2d-14572d864135
+  environment:
+    name: staging
+    url: https://scoala-vaduizei.herokuapp.com/
+  only:
+    - production

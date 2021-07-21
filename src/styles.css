@@ -1,0 +1,138 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+img {
+  height: 100px;
+}
+
+h1 {
+  color: #6c7ac9;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+}
+
+.pagination a {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #6c7ac9;
+  color: #6c7ac9;
+}
+
+.pagination__link {
+  font-weight: bold;
+}
+
+.pagination__link--active a {
+  color: #fff;
+  background: #6c7ac9;
+}
+
+.pagination__link--disabled a {
+  color: rgb(198, 197, 202);
+  border: 1px solid rgb(198, 197, 202);
+}
+
+.style_box{
+    margin-top:25px;
+    display: flex;
+    justifyContent: center;
+    alignItems: left;
+    border:1px solid black;
+
+  }
+
+  $dark-grey: #404040;
+  $nc-blue: #00BDFC;
+  $nc-bl-dark: #0093C4;
+  $red: #FC3F00;
+
+  body {
+    font-family: 'PT Sans', sans-serif;
+    padding: 2rem;
+  }
+  button {
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.75em;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+  .comment-box {
+    max-width: 37.5rem;
+    color: #fff;
+    background-color: #909090;
+    border-radius: 0.875rem;
+    padding: 0.2rem 1rem 2rem;
+  }
+  .comment-form {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+  .comment-form-fields {
+    margin-bottom: 0.25rem;
+    input, textarea {
+      border: none;
+      border-bottom: 1px solid $dark-grey;
+      font-size: 0.85rem;
+      padding: 0.25rem 0;
+      width: 99%;
+
+      &:focus {
+        border-bottom-color: $nc-blue;
+        outline: none;
+      }
+    }
+    textarea {
+      font-style: italic;
+    }
+  }
+  .comment-form-actions {
+
+  }
+  .comment-count {
+    color: $dark-grey;
+  }
+  #comment-reveal {
+    float: right;
+    background-color: $nc-blue;
+    color: #fff;
+  }
+  .comment {
+    border-top: 0.125rem solid $dark-grey;
+  }
+  .comment-body {
+    font-style: italic;
+    margin-left: 1rem;
+  }
+  .comment-footer {
+    margin-bottom: 1rem;
+  }
+  .comment-footer-delete {
+    padding: 0.2rem 0;
+    color: $dark-grey;
+    text-decoration: none;
+
+    &:hover {
+      color: $nc-blue;
+      font-weight: bold;
+    }
+  }
